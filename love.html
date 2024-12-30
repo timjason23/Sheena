@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowers for You</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom, #ffe6f2, #ffb6c1);
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #ff66b2;
+      margin: 10px 0;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 3px 3px 6px #ff1493;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      color: #ff1493;
+      text-shadow: 2px 2px 4px #ff69b4;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 20px auto;
+      padding: 10px;
+      max-width: 800px;
+    }
+
+    .box {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flower {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url('https://i.pinimg.com/736x/83/80/d2/8380d21fc9ce6fa7882ef1d728ea9d26.jpg');
+      background-size: cover;
+      box-shadow: 0 0 15px rgba(255, 20, 147, 0.7);
+      animation: float 5s infinite ease-in-out, move 10s linear infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-100vh);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>To My Love, Sheena Kae</h1>
+    <h2>My love, you light up my world in the most beautiful way. Your smile is my sunshine, and your love is the melody that makes my heart dance. I’m so grateful to have you in my life. I love you always! 🌸</h2>
+    <h2>With all my heart, Tim</h2>
+    <div id="flowers"></div>
+
+    <div class="gallery">
+      <div class="box"><img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.15752-9/467889930_2030543657459627_4504334528710782435_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHuubshtbUQt4wEQC8gg2rvqlG4wyP7QoyqUbjDI_tCjODwgFJBe1drNVkru7Pek7ladAa69zeont5M2SOf2NGG&_nc_ohc=V_aZjA9OyR8Q7kNvgFS3xzK&_nc_zt=23&_nc_ht=scontent.fceb2-2.fna&oh=03_Q7cD1gHwQ1x9vhTmUl0rjCowhQjztL2wdrm45UNDcUMvzUIrDg&oe=679A4EE9" alt="Picture 1"></div>
+      <div class="box"><img src="https://i.pinimg.com/236x/d6/e0/f1/d6e0f115330554569f07ce2e1ea02f28.jpg" alt="Picture 2"></div>
+      <div class="box"><img src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.15752-9/467486156_1801065023966805_6171970792289389040_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHujJnzk0f1Inj-BTgyS7_FWJneFd-3H0lYmd4V37cfSXHmVRHjZKEcg9RTcw3zocCDL9JehCyXiJQ3EIj0BvVK&_nc_ohc=Pr47pjCm_fMQ7kNvgE5XCd-&_nc_zt=23&_nc_ht=scontent.fceb2-1.fna&oh=03_Q7cD1gE7oBzmPc4r6GfL1TQnQBg3FO5dWLw1aXJBk-4_w7poBg&oe=679A5872" alt="Picture 3"></div>
+      <div class="box"><img src="https://i.pinimg.com/474x/cb/f1/8a/cbf18afe11a1181165f88c5e3257cd0b.jpg" alt="Picture 4"></div>
+      <div class="box"><img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.15752-9/467481077_1099444164796427_8908860742554490061_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeFQOz1VVQuXpC_mVZinethexzTtbZkRvBjHNO1tmRG8GGx8nDPrLAmUJnbI89XoWN-Fh1UWnyCz_FrajLTb4N1F&_nc_ohc=kWEE6onqo6IQ7kNvgFhhehH&_nc_zt=23&_nc_ht=scontent.fceb6-1.fna&oh=03_Q7cD1gH7z9mPW-DO83W9TYefDFwhkIVP-NP9r3qW0rWzoscBpg&oe=679A3F54" alt="Picture 5"></div>
+      <div class="box"><img src="https://i.pinimg.com/474x/d5/d3/69/d5d369bdc351f2b0c7693b0240d39eea.jpg" alt="Picture 6"></div>
+    </div>
+  </div>
+
+  <script>
+    const flowerContainer = document.getElementById('flowers');
+
+    function createFlower() {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+
+      const size = Math.random() * 30 + 20;
+      flower.style.width = `${size}px`;
+      flower.style.height = `${size}px`;
+
+      const posX = Math.random() * window.innerWidth;
+      flower.style.left = `${posX}px`;
+      flower.style.top = `${window.innerHeight}px`;
+
+      flower.style.animationDuration = `${Math.random() * 3 + 2}s, ${Math.random() * 5 + 5}s`;
+
+      flowerContainer.appendChild(flower);
+
+      setTimeout(() => flower.remove(), 10000);
+    }
+
+    setInterval(createFlower, 150);
+  </script>
+</body>
+</html>
