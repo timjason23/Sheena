@@ -94,6 +94,38 @@
         transform: translateY(-100vh);
       }
     }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1em;
+      }
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+      }
+      .box {
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      h2 {
+        font-size: 0.9em;
+      }
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+      .box {
+        height: 120px;
+      }
+    }
   </style>
 </head>
 <body>
